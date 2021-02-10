@@ -1,10 +1,20 @@
 import React from 'react';
 import { movies } from '../data';
 
-const Movies = () => {
+const Movies = (props) => {
   return (
     <div>
-        {/*{code here}*/}
+        <h1>Movies Page</h1>
+        {movies.map(movie => 
+          <div>
+            {movie.title}
+            {movie.time}
+            <ul>
+              {movie.genres}
+            </ul>
+          
+          </div>)}
+        
     </div>
   );
 };
